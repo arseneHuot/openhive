@@ -113,6 +113,20 @@ export async function POST(request: NextRequest) {
       )
     }
 
+    // Verify target workspace exists before modifying data
+    const { data: workspace, error: wsError } = await supabaseAdmin
+      .from('workspaces')
+      .select('id')
+      .eq('id', workspaceId)
+      .single()
+
+    if (wsError || !workspace) {
+      return NextResponse.json(
+        { error: 'Invalid or non-existent workspace' },
+        { status: 400 }
+      )
+    }
+
     // Update profile table
     await supabaseAdmin
       .from('profiles')
