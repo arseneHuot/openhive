@@ -57,10 +57,7 @@
     "typescript": "^5"
   },
   "overrides": {
-    "brace-expansion": {
-      "brace-expansion@1.x": "^1.1.18",
-      "brace-expansion@5.x": "^5.0.9"
-    },
+    "brace-expansion": "^1.1.18",
     "flatted": "^3.4.2",
     "js-yaml": "^5.2.1",
     "linkify-it": "^5.0.1",
