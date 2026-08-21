@@ -366,7 +366,7 @@ export const migrations: string[] = [
 
   -- Workspaces
   CREATE POLICY "workspaces_select" ON workspaces FOR SELECT USING (id IN (SELECT get_my_workspace_ids()));
-  CREATE POLICY "workspaces_insert" ON workspaces FOR INSERT WITH CHECK (true);
+  CREATE POLICY "workspaces_insert" ON workspaces FOR INSERT WITH CHECK (auth.uid() IN (SELECT profile_id FROM workspace_members WHERE workspace_id = id));
   CREATE POLICY "workspaces_update" ON workspaces FOR UPDATE USING (id IN (SELECT get_my_admin_workspace_ids()));
 
   -- Workspace Members (insert restricted to self + workspace must exist)

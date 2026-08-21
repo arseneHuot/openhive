@@ -358,7 +358,7 @@ export function MessageBubble({ message, showHeader, isOwn, isThread }: MessageB
             <div
               className="text-[15px] leading-[1.5] whitespace-pre-wrap break-words message-content"
               style={{ color: '#2D2B3D' }}
-              dangerouslySetInnerHTML={{ __html: renderMessageContent(message.content, mentionNames) }}
+              dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(renderMessageContent(message.content, mentionNames)) }}
             />
           )}
         </div>
