@@ -4,6 +4,7 @@
   <img src="https://img.shields.io/badge/LiveKit-WebRTC-FF6B35?style=flat-square" alt="LiveKit" />
   <img src="https://img.shields.io/badge/TypeScript-5-3178C6?style=flat-square&logo=typescript" alt="TypeScript" />
   <img src="https://img.shields.io/badge/License-MIT-blue?style=flat-square" alt="MIT License" />
+  <a href="https://sentrint.com/?ref=badge"><img src="https://sentrint.com/badge/oh9RQIIkOn_34j_rXdPiDA/arseneHuot/openhive.svg" alt="Sentrint security grade" height="20"></a>
 </p>
 
 # OpenHive
